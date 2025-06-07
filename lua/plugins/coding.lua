@@ -87,21 +87,23 @@ return {
     "github/copilot.vim",
     event = "InsertEnter",
     config = function()
+      -- Disable default Tab mapping
       vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-      vim.g.copilot_tab_fallback = ""
-      local cmp = require("cmp")
-      cmp.mapping["<Tab>"] = vim.schedule_wrap(function(fallback)
-        if vim.fn["copilot#Accept"]() ~= "" then
-          vim.api.nvim_feedkeys(
-            vim.api.nvim_replace_termcodes(vim.fn["copilot#Accept"](), true, true, true),
-            "n",
-            true
-          )
-        else
-          fallback()
-        end
-      end)
+      
+      -- Set up custom keybindings
+      vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+        expr = true,
+        replace_keycodes = false
+      })
+      vim.keymap.set('i', '<C-]>', '<Plug>(copilot-next)')
+      vim.keymap.set('i', '<C-[>', '<Plug>(copilot-previous)')
+      vim.keymap.set('i', '<C-\\>', '<Plug>(copilot-suggest)')
+      
+      -- Optional: Use Tab to accept suggestions (conflicts with cmp)
+      -- vim.keymap.set('i', '<Tab>', 'copilot#Accept("\\<Tab>")', {
+      --   expr = true,
+      --   replace_keycodes = false
+      -- })
     end,
   },
 

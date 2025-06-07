@@ -157,3 +157,9 @@ map("n", "<leader><tab><tab>", "<cmd>tabnew<cr>", { desc = "New Tab" })
 map("n", "<leader><tab>]", "<cmd>tabnext<cr>", { desc = "Next Tab" })
 map("n", "<leader><tab>d", "<cmd>tabclose<cr>", { desc = "Close Tab" })
 map("n", "<leader><tab>[", "<cmd>tabprevious<cr>", { desc = "Previous Tab" })
+
+-- GitHub Copilot
+map("n", "<leader>cp", "<cmd>Copilot panel<cr>", { desc = "Copilot Panel" })
+map("n", "<leader>cs", "<cmd>Copilot status<cr>", { desc = "Copilot Status" })
+map("n", "<leader>ce", "<cmd>Copilot enable<cr>", { desc = "Copilot Enable" })
+map("n", "<leader>cd", "<cmd>Copilot disable<cr>", { desc = "Copilot Disable" })

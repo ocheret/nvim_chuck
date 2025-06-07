@@ -73,6 +73,33 @@ return {
 
 This pattern ensures LazyVim defaults are preserved while adding customizations.
 
+## GitHub Copilot Setup
+
+GitHub Copilot is configured and ready to use. To get started:
+
+1. **Authenticate with GitHub Copilot:**
+   ```
+   :Copilot auth
+   ```
+   This will open a browser window to authenticate with your GitHub account.
+
+2. **Check Copilot status:**
+   ```
+   :Copilot status
+   ```
+
+3. **Keybindings in Insert Mode:**
+   - `<Ctrl-J>` - Accept Copilot suggestion
+   - `<Ctrl-]>` - Next suggestion
+   - `<Ctrl-[>` - Previous suggestion
+   - `<Ctrl-\>` - Trigger Copilot suggestion
+
+4. **Normal Mode Commands:**
+   - `<leader>cp` - Open Copilot panel
+   - `<leader>cs` - Check Copilot status
+   - `<leader>ce` - Enable Copilot
+   - `<leader>cd` - Disable Copilot
+
 ## File Structure Notes
 
 - `lazy-lock.json` - Tracked by git for reproducible installs
