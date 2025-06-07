@@ -85,7 +85,7 @@ return {
   -- AI coding assistant
   {
     "github/copilot.vim",
-    event = "InsertEnter",
+    lazy = false, -- Load immediately so commands are available
     config = function()
       -- Disable default Tab mapping
       vim.g.copilot_no_tab_map = true
