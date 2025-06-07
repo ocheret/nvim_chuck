@@ -17,7 +17,7 @@ vim.g.lazyvim_picker = "auto"
 
 -- Set to false to disable `vim.lsp.inlay_hint` if you don't want them
 -- You can also toggle them with <leader>uh (see keymaps.lua)
-vim.g.lazyvim_inlay_hints = false
+vim.g.lazyvim_inlay_hints = true
 
 -- Root dir detection
 -- Each entry can be:
