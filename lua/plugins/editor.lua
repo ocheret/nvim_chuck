@@ -1,4 +1,10 @@
 return {
+  -- WGSL syntax highlighting
+  {
+    "DingDean/wgsl.vim",
+    ft = "wgsl",
+  },
+
   -- File explorer
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -61,6 +67,7 @@ return {
         "typescript",
         "vim",
         "vimdoc",
+        "wgsl",
         "xml",
         "yaml",
       },

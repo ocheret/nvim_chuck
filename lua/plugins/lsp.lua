@@ -221,6 +221,8 @@ return {
         docker_compose_language_service = {},
         -- Markdown
         marksman = {},
+        -- WGSL (WebGPU Shading Language)
+        wgsl_analyzer = {},
       },
     },
   },
